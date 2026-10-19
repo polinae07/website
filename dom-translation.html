@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменяем кириллицу на латиницу по клику</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .passport {
+            position: relative;
+            width: 430px;
+            height: 600px;
+            max-width: 100%;
+            margin: 20px auto;
+            background: url("images/passport.jpg") no-repeat center;
+            background-size: 100% 100%;
+            color: #222;
+            font-size: 14px;
+        }
+
+        .passport div { position: absolute; }
+        .vid { left: 90px; top: 65px; }
+        .date_vid { left: 95px; top: 130px; }
+        .fam { left: 235px; top: 325px; }
+        .imya { left: 235px; top: 370px; }
+        .otc { left: 235px; top: 390px; }
+        .date { left: 168px; top: 415px; }
+        .place { left: 188px; top: 435px; }
+        .img { left: 35px; top: 370px; }
+
+        .img img {
+            width: 100px;
+            height: 110px;
+            object-fit: cover;
+        }
+
+        .controls {
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body id="top">
+    <nav>
+        <a href="index.html"><img src="images/r2.jpg" alt="Главная" width="50"></a>
+        <a href="index.html">Главная</a>
+        <a href="characters.html">Персонажи</a>
+        <a href="planets.html">Планеты и корабли</a>
+        <a href="index.html#films">Фильмы</a>
+        <a href="dom.html">DOM и JavaScript</a>
+        <a href="dom-translation.html" class="active">Изменение текста</a>
+        <a href="1013.html">Алгоритмическая задача</a>
+        <a href="forms.html">Формы</a>
+        <a href="https://www.starwars.com/" target="_blank" rel="noopener noreferrer">Официальный сайт</a>
+    </nav>
+
+    <main>
+        <h1>Изменяем кириллицу на латиницу по клику</h1>
+
+        <section>
+            <h2>Паспорт</h2>
+
+            <div class="passport">
+                <div class="vid" id="vid">МВД НИУ ВШЭ</div>
+                <div class="date_vid">01.01.2020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;000-000</div>
+                <div class="fam" id="fam">Ефимова</div>
+                <div class="imya" id="imya">Полина</div>
+                <div class="otc" id="otc">Тимофеевна</div>
+                <div class="date" id="date">Жен. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14.02.2007</div>
+                <div class="place" id="place">Московская область, Коломна</div>
+                <div class="img">
+                    <img src="images/me.jpg" alt="Фото">
+                </div>
+            </div>
+            <div class="controls">
+               <button onclick="changeText()">Изменить на латиницу</button>
+               <button onclick="returnText()">Вернуть кириллицу</button>
+          </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="dom-translation.js"></script>
+</body>
+</html>
