@@ -6,75 +6,109 @@
     <title>Формы</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="top">
+<body>
+
+<header>
     <nav>
-        <a href="index.html"><img src="images/r2.jpg" alt="Главная" width="50"></a>
         <a href="index.html">Главная</a>
         <a href="characters.html">Персонажи</a>
-        <a href="planets.html">Планеты и корабли</a>
+        <a href="planets.html">Планеты</a>
         <a href="index.html#films">Фильмы</a>
-        <a href="dom.html">DOM и JavaScript</a>
-        <a href="dom-translation.html">Изменение текста</a>
-        <a href="1013.html">Алгоритмическая задача</a>
+        <a href="dom.html">DOM</a>
+        <a href="dom-translation.html">DOM Translation</a>
+        <a href="1013.html">Задача 1013</a>
         <a href="forms.html" class="active">Формы</a>
-        <a href="https://www.starwars.com/" target="_blank" rel="noopener noreferrer">Официальный сайт</a>
+        <a href="https://www.starwars.com/" target="_blank" rel="noopener noreferrer">Star Wars</a>
     </nav>
-    <main>
-        <h1>Формы</h1>
-        <section id="contacts">
-            <h2>1. Контактные данные</h2>
-            <p>Заполни данные для обратной связи.</p>
-            <form action="https://httpbin.org/post" method="post">
-                <p><label for="surname">Фамилия:</label><br>
-                <input type="text" id="surname" name="surname" required></p>
+</header>
 
-                <p><label for="firstname">Имя:</label><br>
-                <input type="text" id="firstname" name="firstname" required></p>
+<main>
+    <h1>Формы HTML</h1>
 
-                <p><label for="group">Учебная группа:</label><br>
-                <input type="text" id="group" name="group" required></p>
+    <h2>Форма обратной связи</h2>
 
-                <p><label for="phone">Мобильный телефон:</label><br>
-                <input type="tel" id="phone" name="phone" required></p>
+    <form action="https://httpbin.org/post" method="post">
+        <p>
+            <label for="surname">Фамилия:</label>
+            <input type="text" id="surname" name="surname" required>
+        </p>
 
-                <p><label for="email">Электронная почта:</label><br>
-                <input type="email" id="email" name="email" required></p>
+        <p>
+            <label for="firstname">Имя:</label>
+            <input type="text" id="firstname" name="firstname" required>
+        </p>
 
-                <p><label for="send-date">Дата отправки:</label><br>
-                <input type="date" id="send-date" name="send_date" required></p>
+        <p>
+            <label for="group">Группа:</label>
+            <input type="text" id="group" name="group" required>
+        </p>
 
-                <button type="submit">Отправить данные</button>
-            </form>
-        </section>
-        <section id="order">
-            <h2>2. Магазин «Звёздные войны»</h2>
-            <p>Оформи учебный заказ тематического товара.</p>
-            <form action="https://httpbin.org/post" method="post">
-                <p><label for="customer">Имя покупателя:</label><br>
-                <input type="text" id="customer" name="customer_name" value="Покупатель" required></p>
+        <p>
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </p>
 
-                <p><label for="quantity">Количество товаров:</label><br>
-                <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" required></p>
+        <p>
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" required>
+        </p>
 
-                <p>Выбери товар:</p>
-                <label><input type="radio" name="product" value="droid" checked> Фигурка дроида</label><br>
-                <label><input type="radio" name="product" value="ship"> Модель корабля</label><br>
-                <label><input type="radio" name="product" value="poster"> Постер</label>
+        <p>
+            <label for="send_date">Дата отправки:</label>
+            <input type="date" id="send_date" name="send_date" required>
+        </p>
 
-                <p><label><input type="checkbox" name="gift_wrap" value="yes"> Подарочная упаковка</label></p>
+        <button type="submit">Отправить данные</button>
+    </form>
 
-                <p><label for="delivery">Дата доставки:</label><br>
-                <input type="date" id="delivery" name="delivery_date" required></p>
+    <hr>
 
-                <p><label for="password">Код заказа:</label><br>
-                <input type="password" id="password" name="order_code" value="STAR123" required></p>
+    <h2>Форма заказа товара</h2>
 
-                <input type="hidden" name="site" value="Star Wars">
+    <form action="https://httpbin.org/post" method="post">
+        <p>
+            <label for="product">Название товара:</label>
+            <input type="text" id="product" name="product" value="Фигурка R2-D2" required>
+        </p>
 
-                <button type="submit">Отправить заказ</button>
-            </form>
-        </section>
-        <p><a href="#top">Вернуться к началу страницы ↑</a></p>
-    </main>
+        <p>
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+        </p>
+
+        <p>Способ доставки:</p>
+        <label>
+            <input type="radio" name="delivery" value="courier" checked>
+            Курьер
+        </label>
+        <label>
+            <input type="radio" name="delivery" value="pickup">
+            Самовывоз
+        </label>
+
+        <p>Дополнительные услуги:</p>
+        <label>
+            <input type="checkbox" name="gift_wrap" value="yes">
+            Подарочная упаковка
+        </label>
+
+        <p>
+            <label for="order_date">Дата заказа:</label>
+            <input type="date" id="order_date" name="order_date" required>
+        </p>
+
+        <p>
+            <label for="password">Пароль подтверждения:</label>
+            <input type="password" id="password" name="password" required>
+        </p>
+
+        <input type="hidden" name="form_type" value="order">
+
+        <p>
+            <button type="submit">Оформить заказ</button>
+        </p>
+    </form>
+</main>
+
 </body>
 </html>
