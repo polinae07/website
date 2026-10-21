@@ -1,0 +1,85 @@
+<DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение алгоритмической задачи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+    <nav>
+        <a href="index.html"><img src="images/r2.jpg" alt="Главная" width="50"></a>
+        <a href="index.html">Главная</a>
+        <a href="characters.html">Персонажи</a>
+        <a href="planets.html">Планеты и корабли</a>
+        <a href="index.html#films">Фильмы</a>
+        <a href="dom.html">DOM и JavaScript</a>
+        <a href="dom-translation.html">Изменение текста</a>
+        <a href="1013.html" class="active">Алгоритмическая задача</a>
+        <a href="forms.html">Формы</a>
+        <a href="https://www.starwars.com/" target="_blank" rel="noopener noreferrer">Официальный сайт</a>
+    </nav>
+
+    <main>
+        <h1>Решение алгоритмической задачи</h1>
+
+        <section>
+            <h2>Задача № 1013</h2>
+
+            <p name="formulation">
+                Даны вещественные числа X и Y. Вычислить Z:
+                Z = XY при X &gt; Y, Z = ln(X + Y) в противном случае.
+            </p>
+
+            <form action="https://www.bing.com/search?"
+                  id="UserEnter" name="UserEnter" target="_blank">
+
+                <ul>
+                    <li>
+                        Для поисковика:
+                        <input name="q" value="search">
+                    </li>
+
+                    <li>
+                        Формулировка задачи:
+                        <br>
+                        <textarea cols="60" rows="4" id="task"
+                            name="formulation">Даны вещественные числа X и Y. Вычислить Z. Z = XY при X > Y, Z = ln(X + Y) в противном случае.</textarea>
+                    </li>
+
+                    <li>
+                        X:
+                        <input id="x" name="x" type="number"
+                            step="any" value="5" required>
+                    </li>
+
+                    <li>
+                        Y:
+                        <input id="y" name="y" type="number"
+                            step="any" value="3" required>
+                    </li>
+
+                    <li>
+                        Результат решения задачи:
+                        <input id="result" name="result"
+                            value="не определен" readonly>
+                    </li>
+
+                    <li>
+                        Действие 1:
+                        <input id="verify" type="button" value="Проверить">
+                    </li>
+
+                    <li>
+                        Действие 2:
+                        <input id="send" type="submit" value="Отправить">
+                    </li>
+                </ul>
+            </form>
+        </section>
+    </main>
+
+    <script src="1013.js"></script>
+</body>
+</html>
